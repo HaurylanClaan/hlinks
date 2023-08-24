@@ -1,0 +1,160 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: chartreuse;
+  --buton-color: rgb(255, 255, 255);
+  --border-buton: rgba(255, 255, 255, 0.5);
+  --bg-buton: rgba(255, 255, 255, 0.1);
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --buton-color-hover: black;
+  --bg-buton-color-hover: rgb(146, 146, 146);
+  --border-buton-color-hover: rgb(48, 47, 47);
+  --switch-buton: url(./assets/MoonStars.svg);
+}
+
+.light {
+  --text-color: black;
+  --buton-color: black;
+  --border-buton: black;
+  --bg-buton: rgba(0, 0, 0, 0.05);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --buton-color-hover: rgb(255, 255, 255);
+  --switch-buton: url(./assets/Sun.svg);
+}
+
+body {
+  /*
+  background-image: url(/assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: color image repeat position/sizer*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+body * {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-color);
+}
+
+#conteiner {
+  width: 360px;
+  margin: auto;
+  padding-top: 56px;
+  padding: 0px 24px;
+}
+
+/* profile */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 30px;
+  border-radius: 50%;
+  background: white var(--switch-buton) no-repeat center;
+  border: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bg-buton);
+  border: 1px solid var(--border-buton);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+/* lista de links */
+ul {
+  padding: 24px 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  color: var(--buton-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border-buton);
+  background: var(--bg-buton);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.5s;
+}
+
+ul li :hover {
+  color: var(--buton-color-hover);
+  background-color: var(--bg-buton-color-hover);
+  border: 3px solid var(--border-buton-color-hover);
+}
+
+#socials {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding: 24px 0px;
+}
+
+#socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#socials :hover {
+  background-color: rgba(82, 81, 81, 0.322);
+}
+
+#rodape {
+  padding: 24px 0px;
+  text-align: center;
+}
